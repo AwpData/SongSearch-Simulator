@@ -9,6 +9,16 @@ public class SongCollection {
 		}
 	}
 
+	public static void printSongCollection() { // Prints the SongCollection
+		for (int i = 0; i < songcollection.size(); i++) {
+			System.out.print(songcollection.get(i).toString());
+		}
+	}
+
+	public static ArrayList<Song> getSongCollection() {
+		return songcollection;
+	}
+
 	public static void filterYear(Range r) {
 		ArrayList<Song> tempcollection = new ArrayList<>();
 		for (int i = 0; i < songcollection.size(); i++) {
@@ -49,12 +59,6 @@ public class SongCollection {
 		songcollection = tempcollection;
 	}
 
-	public static void getSongCollection() { // Prints the SongCollection
-		for (int i = 0; i < songcollection.size(); i++) {
-			System.out.print(songcollection.get(i).toString());
-		}
-	}
-
 	public static void sortYear() { // Sorts by Ascending Year
 		for (int i = 1; i < songcollection.size(); i++) {
 			for (int j = i; j > 0 && songcollection.get(j).getYear() < songcollection.get(j - 1).getYear(); j--) {
@@ -73,8 +77,7 @@ public class SongCollection {
 
 	public static void sortArtist() { // Sorts by Ascending Artist
 		for (int i = 1; i < songcollection.size(); i++) {
-			for (int j = i; j > 0 && songcollection.get(j).getArtist().toLowerCase()
-					.compareTo(songcollection.get(j - 1).getArtist().toLowerCase()) < 0; j--) {
+			for (int j = i; j > 0 && songcollection.get(j).getArtist().toLowerCase().compareTo(songcollection.get(j - 1).getArtist().toLowerCase()) < 0; j--) {
 				Collections.swap(songcollection, j, (j - 1));
 			}
 		}
@@ -82,11 +85,9 @@ public class SongCollection {
 
 	public static void sortTitle() {
 		for (int i = 1; i < songcollection.size(); i++) {
-			for (int j = i; j > 0 && songcollection.get(j).getTitle().toLowerCase()
-					.compareTo(songcollection.get(j - 1).getTitle().toLowerCase()) < 0; j--) {
+			for (int j = i; j > 0 && songcollection.get(j).getTitle().toLowerCase().compareTo(songcollection.get(j - 1).getTitle().toLowerCase()) < 0; j--) {
 				Collections.swap(songcollection, j, (j - 1));
 			}
 		}
 	}
 }
-
