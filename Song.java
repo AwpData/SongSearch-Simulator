@@ -39,6 +39,6 @@ public class Song {
 	}
 
 	public String toString() {
-		return (getYear() + "\t" + getRank() + "\t" + getArtist() + "\t\t" + getTitle() + "\n");
+		return (getYear() + "\t" + getRank() + "\t" + getArtist() + "\t\t" + getTitle());
 	}
 }
