@@ -7,7 +7,6 @@ import java.io.*;
 public class GazillionSongs {
 	public static void main(String[] args) throws FileNotFoundException {
 		ArrayList<Song> songs = new ArrayList<>();
-		PrintStream output = new PrintStream("src/Output.txt");
 		// File testifexists = new File("src/GazillionSongs.txt");
 		Scanner input = new Scanner(System.in);
 		String choice = "";
@@ -22,11 +21,20 @@ public class GazillionSongs {
 		}
 		Song.toCollection();
 		System.out.println(filename + ".txt loaded!"); // Psst! Non-existent file
+		System.out.println(songs.size() + " songs loaded!");
+		System.out.println();
+		System.out.println("Enter the name of the file you will output to");
+		String outputfilename = input.nextLine();
+		System.out.println(outputfilename + ".txt created!");
+
 		while (!choice.contains("-quit")) {
+			PrintStream output = new PrintStream("src/Output.txt");
+			for (int i = 0; i < SongCollection.getSongCollection().size(); i++) {
+				output.println(SongCollection.getSongCollection().get(i).toString());
+			}
 			System.out.println();
 			System.out.println("What would you like to do with your playlist?");
 			System.out.println("-print (Prints the playlist to console)");
-			System.out.println("-tofile (Prints the playlist to file)");
 			System.out.println("-filteryear [YEAR1-YEAR2] or [YEAR] (Filters songs between one or more years)");
 			System.out.println("-filterrank [RANK#-RANK#] or [RANK#] (Filters songs with this rank(s))");
 			System.out.println("-filterartist [ARTIST NAME] (Filters songs by this artist)");
@@ -38,13 +46,7 @@ public class GazillionSongs {
 			choice = input.nextLine();
 			if (choice.equals("-print")) {
 				SongCollection.printSongCollection();
-			} else if (choice.equals("-tofile")) {
-				output.flush();
-				for (int i = 0; i < songs.size(); i++) {
-					output.print(SongCollection.getSongCollection().get(i).toString());
-				}
-			}
-			else if (choice.contains("-filteryear")) {
+			} else if (choice.contains("-filteryear")) {
 				Range range = Range.parse(choice.substring(12));
 				SongCollection.filterYear(range);
 			} else if (choice.contains("-filterrank")) {
@@ -54,7 +56,19 @@ public class GazillionSongs {
 				SongCollection.filterArtist(choice.substring(14));
 			} else if (choice.contains("-filtertitle")) {
 				SongCollection.filterTitle(choice.substring(13));
+			} else if (choice.contains("-sortByA year")) {
+				SongCollection.sortYear();
+			} else if (choice.contains("-sortByA rank")) {
+				SongCollection.sortRank();
+			} else if (choice.contains("-sortByA artist")) {
+				SongCollection.sortArtist();
+			} else if (choice.contains("-sortByA title")) {
+				SongCollection.sortTitle();
+			} else if (choice.contains("-restart")) {
+				SongCollection.restart(songs);
 			}
+
 		}
+		System.out.println("Jam ON!");
 	}
 }
