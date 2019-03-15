@@ -11,12 +11,16 @@ public class SongCollection {
 
 	public static void printSongCollection() { // Prints the SongCollection
 		for (int i = 0; i < songcollection.size(); i++) {
-			System.out.print(songcollection.get(i).toString());
+			System.out.println(songcollection.get(i).toString());
 		}
 	}
 
 	public static ArrayList<Song> getSongCollection() {
 		return songcollection;
+	}
+
+	public static void restart(ArrayList<Song> song) {
+		songcollection = song;
 	}
 
 	public static void filterYear(Range r) {
@@ -27,6 +31,7 @@ public class SongCollection {
 			}
 		}
 		songcollection = tempcollection;
+		System.out.println(songcollection.size() + " matches found!");
 	}
 
 	public static void filterRank(Range r) {
@@ -37,6 +42,7 @@ public class SongCollection {
 			}
 		}
 		songcollection = tempcollection;
+		System.out.println(songcollection.size() + " matches found!");
 	}
 
 	public static void filterArtist(String artist) {
@@ -47,6 +53,7 @@ public class SongCollection {
 			}
 		}
 		songcollection = tempcollection;
+		System.out.println(songcollection.size() + " matches found!");
 	}
 
 	public static void filterTitle(String title) {
@@ -57,6 +64,7 @@ public class SongCollection {
 			}
 		}
 		songcollection = tempcollection;
+		System.out.println(songcollection.size() + " matches found!");
 	}
 
 	public static void sortYear() { // Sorts by Ascending Year
