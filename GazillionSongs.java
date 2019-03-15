@@ -67,7 +67,6 @@ public class GazillionSongs {
 			} else if (choice.contains("-restart")) {
 				SongCollection.restart(songs);
 			}
-
 		}
 		System.out.println("Jam ON!");
 	}
