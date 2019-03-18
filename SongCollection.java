@@ -10,8 +10,12 @@ public class SongCollection {
 	}
 
 	public static void printSongCollection() { // Prints the SongCollection
-		for (int i = 0; i < songcollection.size(); i++) {
-			System.out.println(songcollection.get(i).toString());
+		if (songcollection.size() == 0) {
+			System.out.println("No matches found!");
+		} else {
+			for (int i = 0; i < songcollection.size(); i++) {
+				System.out.println(songcollection.get(i).toString());
+			}
 		}
 	}
 
@@ -73,6 +77,7 @@ public class SongCollection {
 				Collections.swap(songcollection, j, (j - 1));
 			}
 		}
+		System.out.println("Completed Sort By Year!");
 	}
 
 	public static void sortRank() { // Sorts by Ascending Rankings
@@ -81,6 +86,7 @@ public class SongCollection {
 				Collections.swap(songcollection, j, (j - 1));
 			}
 		}
+		System.out.println("Completed Sort By Ranking");
 	}
 
 	public static void sortArtist() { // Sorts by Ascending Artist
@@ -89,6 +95,7 @@ public class SongCollection {
 				Collections.swap(songcollection, j, (j - 1));
 			}
 		}
+		System.out.println("Completed Sort By Artist");
 	}
 
 	public static void sortTitle() {
@@ -97,5 +104,6 @@ public class SongCollection {
 				Collections.swap(songcollection, j, (j - 1));
 			}
 		}
+		System.out.println("Completed Sort By Title");
 	}
 }
