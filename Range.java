@@ -45,5 +45,4 @@ public class Range {
 	public int getMax() { // Return the maximum value in this range.
 		return max;
 	}
-
 }
