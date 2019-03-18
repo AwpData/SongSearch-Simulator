@@ -1,3 +1,3 @@
 # Spotify/Pandora/Itunes simulator
 
-Description coming soon 
+Project close to finishing
