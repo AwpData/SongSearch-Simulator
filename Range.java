@@ -4,12 +4,12 @@ public class Range {
 
 	public static Range parse(String s) {
 		Range range = new Range();
-		if (!s.contains("-")) {
+		if (!s.contains("/")) {
 			range.min = Integer.valueOf(s);
 			range.max = range.min;
 		} else {
-			range.min = Integer.valueOf(s.substring(0, s.indexOf("-")));
-			range.max = Integer.valueOf(s.substring(s.indexOf("-") + 1));
+			range.min = Integer.valueOf(s.substring(0, s.indexOf("/")));
+			range.max = Integer.valueOf(s.substring((s.indexOf("/") + 1), s.length()));
 		}
 		if (range.min > range.max) {
 			int temp = range.max;
