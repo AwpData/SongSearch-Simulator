@@ -1,8 +1,6 @@
 import java.util.*;
 import java.io.*;
 
-//Needs Custom spacing and UI
-//Needs to print error input
 //Enter INPUT file as MySongs or you will never exit the loop! (For Testing)
 
 public class GazillionSongs {
@@ -42,7 +40,7 @@ public class GazillionSongs {
 			System.out.println("-filterrank [RANK#/RANK#] or [RANK#] (Filters songs with this rank(s))");
 			System.out.println("-filterartist [ARTIST NAME] (Filters songs by this artist)");
 			System.out.println("-filtertitle [SONG NAME] (Filters songs that have this keyword in it)");
-			System.out.println("-sortByA [year] or [rank] or [artist] or [title] (sorts by \"year\", \"rank\", \"artist\", or \"song\" in acsending order)");
+			System.out.println("-sortby [year] or [rank] or [artist] or [title] (sorts by \"year\", \"rank\", \"artist\", or \"song\" in acsending order)");
 			System.out.println("-restart (Sets playlist back to default)");
 			System.out.println("-quit (Quits the program)");
 			System.out.println();
@@ -64,13 +62,13 @@ public class GazillionSongs {
 					SongCollection.filterArtist(word.substring((word.indexOf("filterartist") + 13), word.length()));
 				} else if (word.contains("filtertitle")) {
 					SongCollection.filterTitle(word.substring((word.indexOf("filtertitle") + 12), word.length()));
-				} else if (word.contains("sortByA year")) {
+				} else if (word.contains("sortby year")) {
 					SongCollection.sortYear();
-				} else if (word.contains("sortByA rank")) {
+				} else if (word.contains("sortby rank")) {
 					SongCollection.sortRank();
-				} else if (word.contains("sortByA artist")) {
+				} else if (word.contains("sortby artist")) {
 					SongCollection.sortArtist();
-				} else if (word.contains("sortByA title")) {
+				} else if (word.contains("sortby title")) {
 					SongCollection.sortTitle();
 				} else if (word.contains("restart")) {
 					SongCollection.restart(songs);
