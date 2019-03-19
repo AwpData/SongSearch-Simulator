@@ -46,7 +46,7 @@ public class GazillionSongs {
 			System.out.println();
 			choice = input.nextLine();
 			Scanner split = new Scanner(choice).useDelimiter("\\s-");
-			boolean invalid = false;
+			boolean invalid = false; // checks for invalid commands
 			while (split.hasNext() && !invalid) {
 				String word = split.next();
 				if (word.contains("print")) {
