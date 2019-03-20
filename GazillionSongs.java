@@ -9,7 +9,7 @@ public class GazillionSongs {
 		Scanner input = new Scanner(System.in);
 		String choice = "";
 		Scanner file = new Scanner(new File("src/GazillionSongs.txt"));
-		System.out.println("Welcome to the program!\nEnter the name of your sick playlist:");
+		System.out.println("Welcome to the program!\nEnter the name of your playlist:");
 		String filename = input.nextLine(); // Placeholder that hides the actual name
 		while (!filename.equals("MySongs")) { // TEST LOOP REMOVE LATER
 			System.out.println("File does not exist! Try again!");
