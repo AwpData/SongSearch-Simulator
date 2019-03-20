@@ -1,4 +1,4 @@
-# Spotify/Pandora/iTunes simulator
+# Spotify/Pandora/iTunes Simulator
 
 Does things like: <br />
 -Sort a playlist by year, rank, artist, or title <br />
