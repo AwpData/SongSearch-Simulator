@@ -9,32 +9,26 @@ public class GazillionSongs {
 		Scanner input = new Scanner(System.in);
 		String choice = "";
 		Scanner file = new Scanner(new File("src/GazillionSongs.txt"));
-		System.out.println("Welcome to the program!\nEnter the name of your playlist:");
-		String filename = input.nextLine(); // Placeholder that hides the actual name
-		while (!filename.equals("MySongs")) { // TEST LOOP REMOVE LATER
-			System.out.println("File does not exist! Try again!");
-			filename = input.nextLine();
-		}
-		System.out.println("File found! Loading " + filename + ".txt...\n");
+		/*
+		 * System.out.println("Welcome to the program!\nEnter the name of your playlist:"); String filename = input.nextLine(); // Placeholder that hides the actual name while (!filename.equals("MySongs")) { // TEST LOOP REMOVE LATER System.out.println("File does not exist! Try again!"); filename = input.nextLine(); } System.out.println("File found! Loading " + filename + ".txt...\n");
+		 */
 		while (file.hasNextLine()) { // Adds songs to temp array
 			String s = file.nextLine();
 			songs.add(Song.parse(s));
 		}
 		Song.toCollection();
-		System.out.println(filename + ".txt loaded!"); // Psst! Non-existent file
-		System.out.println(songs.size() + " songs loaded!");
-		System.out.println();
-		System.out.println("Creating File...Enter the name of the file you will output to:");
-		String outputfilename = input.nextLine();
-		System.out.println(outputfilename + ".txt created!");
+		/*
+		 * (System.out.println(filename + ".txt loaded!"); // Psst! Non-existent file System.out.println(songs.size() + " songs loaded!\n"); System.out.println("Creating File...Enter the name of the file you will output to:"); String outputfilename = input.nextLine(); System.out.println(outputfilename + ".txt created!");
+		 */
 
 		while (!choice.contains("-quit")) {
 			PrintStream output = new PrintStream("src/Output.txt");
+			output.println("Year\tRank\t\tArtist\t\t\t\t\t\t\t\t\tTitle");
+			output.println("====\t====\t==============\t\t\t\t=====================================");
 			for (int i = 0; i < SongCollection.getSongCollection().size(); i++) {
 				output.println(SongCollection.getSongCollection().get(i).toString());
 			}
-			System.out.println();
-			System.out.println("What would you like to do with your playlist?");
+			System.out.println("\nWhat would you like to do with your playlist?");
 			System.out.println("-print (Prints the playlist to console)");
 			System.out.println("-filteryear [YEAR1/YEAR2] or [YEAR] (Filters songs between one or more years)");
 			System.out.println("-filterrank [RANK#/RANK#] or [RANK#] (Filters songs with this rank(s))");
@@ -42,15 +36,15 @@ public class GazillionSongs {
 			System.out.println("-filtertitle [SONG NAME] (Filters songs that have this keyword in it)");
 			System.out.println("-sortby [year] or [rank] or [artist] or [title] (sorts by \"year\", \"rank\", \"artist\", or \"song\" in acsending order)");
 			System.out.println("-restart (Sets playlist back to default)");
-			System.out.println("-quit (Quits the program)");
-			System.out.println();
+			System.out.println("-quit (Quits the program)\n");
 			choice = input.nextLine();
 			Scanner split = new Scanner(choice).useDelimiter("\\s-");
 			boolean invalid = false; // checks for invalid commands
 			while (split.hasNext() && !invalid) {
 				String word = split.next();
 				if (word.contains("print")) {
-					System.out.println();
+					System.out.println("\nYear\tRank\t\t\tArtist\t\t\t\t\t\t\t\tTitle");
+					System.out.println("====\t====\t\t======================\t\t\t\t=====================================================");
 					SongCollection.printSongCollection();
 				} else if (word.contains("filteryear")) {
 					Range range = Range.parse(word.substring((word.indexOf("filteryear") + 11), word.length()));
