@@ -9,17 +9,23 @@ public class GazillionSongs {
 		Scanner input = new Scanner(System.in);
 		String choice = "";
 		Scanner file = new Scanner(new File("src/GazillionSongs.txt"));
-		/*
-		 * System.out.println("Welcome to the program!\nEnter the name of your playlist:"); String filename = input.nextLine(); // Placeholder that hides the actual name while (!filename.equals("MySongs")) { // TEST LOOP REMOVE LATER System.out.println("File does not exist! Try again!"); filename = input.nextLine(); } System.out.println("File found! Loading " + filename + ".txt...\n");
-		 */
+		System.out.println("Welcome to the program!\nEnter the name of your playlist:");
+		String filename = input.nextLine(); // Placeholder that hides the actual name
+		while (!filename.equals("MySongs")) { // TEST LOOP REMOVE LATER
+			System.out.println("File does not exist! Try again!");
+			filename = input.nextLine();
+		}
+		System.out.println("File found! Loading " + filename + ".txt...\n");
 		while (file.hasNextLine()) { // Adds songs to temp array
 			String s = file.nextLine();
 			songs.add(Song.parse(s));
 		}
 		Song.toCollection();
-		/*
-		 * (System.out.println(filename + ".txt loaded!"); // Psst! Non-existent file System.out.println(songs.size() + " songs loaded!\n"); System.out.println("Creating File...Enter the name of the file you will output to:"); String outputfilename = input.nextLine(); System.out.println(outputfilename + ".txt created!");
-		 */
+		System.out.println(filename + ".txt loaded!"); // Psst! Non-existent file
+		System.out.println(songs.size() + " songs loaded!\n");
+		System.out.println("Creating File...Enter the name of the file you will output to:");
+		String outputfilename = input.nextLine();
+		System.out.println(outputfilename + ".txt created!");
 
 		while (!choice.contains("-quit")) {
 			PrintStream output = new PrintStream("src/Output.txt");
