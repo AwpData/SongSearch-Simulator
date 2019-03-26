@@ -48,6 +48,7 @@ public class GazillionSongs {
 			boolean invalid = false; // checks for invalid commands
 			while (split.hasNext() && !invalid) {
 				String word = split.next();
+				word = word.toLowerCase();
 				if (word.contains("print")) {
 					System.out.println("\nYear\tRank\t\t\tArtist\t\t\t\t\t\t\t\tTitle");
 					System.out.println("====\t====\t\t======================\t\t\t\t=====================================================");
@@ -63,12 +64,16 @@ public class GazillionSongs {
 				} else if (word.contains("filtertitle")) {
 					SongCollection.filterTitle(word.substring((word.indexOf("filtertitle") + 12), word.length()));
 				} else if (word.contains("sortby year")) {
+					System.out.println("Sorting by year...");
 					SongCollection.sortYear();
 				} else if (word.contains("sortby rank")) {
+					System.out.println("Sorting by rank...");
 					SongCollection.sortRank();
 				} else if (word.contains("sortby artist")) {
+					System.out.println("Sorting by artist...");
 					SongCollection.sortArtist();
 				} else if (word.contains("sortby title")) {
+					System.out.println("Sorting by title...");
 					SongCollection.sortTitle();
 				} else if (word.contains("restart")) {
 					SongCollection.restart(songs);
