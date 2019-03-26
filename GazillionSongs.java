@@ -81,6 +81,6 @@ public class GazillionSongs {
 				}
 			}
 		}
-		System.out.println("Jam ON!");
+		System.out.println("Program terminated.");
 	}
 }
