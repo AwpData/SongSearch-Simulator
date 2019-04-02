@@ -1,7 +1,6 @@
 import java.util.*;
 import java.io.*;
 
-//Enter INPUT file as MySongs or you will never exit the loop! (Will be removed later).
 //Input with multiple years/ranks enters with a slash (Ex. 1990/1995, 1/10).
 
 public class GazillionSongs {
@@ -12,10 +11,6 @@ public class GazillionSongs {
 		Scanner file = new Scanner(new File("src/GazillionSongs.txt"));
 		System.out.println("Welcome to the program!\nEnter the name of your playlist:");
 		String filename = input.nextLine(); // Placeholder for non-existant input file
-		while (!filename.equals("MySongs")) { // TEST LOOP REMOVE LATER
-			System.out.println("File does not exist! Try again!");
-			filename = input.nextLine();
-		}
 		System.out.println("File found! Loading " + filename + ".txt...\n");
 		while (file.hasNextLine()) { // Adds songs to temp array
 			String s = file.nextLine();
@@ -46,7 +41,7 @@ public class GazillionSongs {
 			System.out.println("-quit (Quits the program)\n");
 			choice = input.nextLine();
 			Scanner split = new Scanner(choice).useDelimiter("\\s-");
-			boolean invalid = false; // checks for invalid commands
+			boolean invalid = false; // Checks for invalid commands
 			while (split.hasNext() && !invalid) {
 				String word = split.next();
 				if (word.contains("print")) {
