@@ -63,7 +63,7 @@ public class SongCollection {
 	public static void filterTitle(String title) { // Remove all songs from this collection whose title does not contain the given string (case-insensitive).
 		ArrayList<Song> tempcollection = new ArrayList<>();
 		for (int i = 0; i < songcollection.size(); i++) {
-			if (songcollection.get(i).getTitle().toLowerCase().contains((title.toLowerCase()))) {
+			if (songcollection.get(i).getTitle().contains((title))) {
 				tempcollection.add(songcollection.get(i));
 			}
 		}
