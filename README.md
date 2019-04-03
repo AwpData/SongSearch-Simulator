@@ -7,9 +7,9 @@ What it can do: <br />
 
 # Installation Instructions
 
--On Eclipse make 4 classes for GazillionSongs.java, Song.java, SongCollection.java, and Range.java. <br />
--Make sure that you create 2 text files, one for the input (GazillionSongs.txt), and one for the output file (Output.txt). <br />
--Now it's ready to run! <br />
+-On Eclipse (I prefer this one) make 4 classes for GazillionSongs.java, Song.java, SongCollection.java, and Range.java. <br />
+-Make sure that you create 2 text files (.txt), one for the input (GazillionSongs.txt), and one for the output file (Output.txt). <br />
+-Hit the run button! <br />
 
 # Directions / Important Notes
 
