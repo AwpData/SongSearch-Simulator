@@ -22,11 +22,11 @@ What it can do: <br />
 # User Commands
 ```
 -print (Prints the playlist to console <br />
--filteryear [YEAR1/YEAR2] or [YEAR1] (Filters songs between one or more years) <br />
--filterrank [RANK#/RANK#] or [RANK#] (Filters songs with this rank(s)) <br />
--filterartist [ARTIST NAME] (Filters songs by this artist) <br />
--filtertitle [SONG NAME] (Filters songs that have this keyword in it) <br />
--sortby [year] or [rank] or [artist] or [title] (sorts by \"year\", \"rank\", \"artist\", or \"song\" in acsending order) <br />
--restart (Sets playlist back to default) <br />
--quit (Quits the program) <br />
+-filteryear [YEAR1/YEAR2] or [YEAR1] (Filters songs between one or more years) 
+-filterrank [RANK#/RANK#] or [RANK#] (Filters songs with this rank(s))
+-filterartist [ARTIST NAME] (Filters songs by this artist)
+-filtertitle [SONG NAME] (Filters songs that have this keyword in it)
+-sortby [year] or [rank] or [artist] or [title] (sorts by \"year\", \"rank\", \"artist\", or \"song\" in acsending order)
+-restart (Sets playlist back to default)
+-quit (Quits the program) 
 ```
