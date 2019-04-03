@@ -15,7 +15,7 @@
 <Year> \t <Rank> \t <Artist> \t <Title>
 ```
 
-# Directions / Important Notes
+# Important Notes
 
 -Inputs should be entered with a **hyphen** preceding the command (ex. -filteryear 1970). <br />
 -All inputs have to be entered correctly as they are **CASE SENSITIVE** and considered invalid input (ex. -Filteryear 1970). <br />
