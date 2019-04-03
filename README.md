@@ -18,10 +18,10 @@
 # Important Notes
 
 -Inputs should be entered with a **hyphen** preceding the command (ex. -filteryear 1970). <br />
--All inputs have to be entered correctly as they are **CASE SENSITIVE** and considered invalid input (ex. -Filteryear 1970). <br />
+-All inputs have to be entered correctly as they are **CASE SENSITIVE** and considered invalid input (ex. -FilTerYear 1970). <br />
 -Title inputs are **CASE SENSITIVE** so entering "-filtertitle i" would only filter songs with a lowercase "i". <br />
 -More than one command can be inputted at a time (ex. -filteryear 1970 -filtertitle Love -sortby artist). <br />
--You can filter by a range of years or ranks. Make sure you use a **"/"** to seperate the two (ex. -filterank 1/10 -filteryear 1970/1972). <br />
+-You can filter by a range of years or ranks. Make sure you use a **"/"** to seperate the two (ex. -filterrank 1/10 -filteryear 1970/1972). <br />
 
 # User Commands
 ```
