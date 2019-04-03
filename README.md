@@ -11,6 +11,11 @@ What it can do: <br />
 -Make sure that you create 2 text files (.txt), one for the input (GazillionSongs.txt), and one for the output file (Output.txt). <br />
 -Hit the run button! <br />
 
+-You can modify the GazillionSongs.txt file to suit your needs but make sure it follows this format! <br />
+```
+<Year> \t <Rank> \t <Artist> \t <Title>
+```
+
 # Directions / Important Notes
 
 -Inputs should be entered with a **hyphen** preceding the command (ex. -filteryear 1970). <br />
