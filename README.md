@@ -7,19 +7,20 @@ What it can do: <br />
 
 # Installation Instructions
 
-On Eclipse make 4 classes for GazillionSongs.java, Song.java, SongCollection.java, and Range.java. <br />
-Make sure that you create 2 text files, one for the input (GazillionSongs.txt), and one for the output file (Output.txt). <br />
-Now it's ready to run! <br />
+-On Eclipse make 4 classes for GazillionSongs.java, Song.java, SongCollection.java, and Range.java. <br />
+-Make sure that you create 2 text files, one for the input (GazillionSongs.txt), and one for the output file (Output.txt). <br />
+-Now it's ready to run! <br />
 
 # Directions / Important Notes
 
-Inputs should be entered with a hyphen preceding the command (ex. -filteryear 1970). <br />
-All inputs have to be entered correctly as they are case sensitive and considered invalid input (ex. -Filteryear 1970). <br />
-Title inputs are CASE SENSITIVE so entering "-filtertitle i" would only filter songs with a lowercase "i". <br />
-More than one command can be inputted at a time (ex. -filteryear 1970 -filtertitle Love -sortby artist). <br />
-You can filter by a range of years or ranks. Make sure you use a "/" to seperate the two (ex. -filterank 1/10 -filteryear 1970/1972). <br />
+-Inputs should be entered with a **hyphen** preceding the command (ex. -filteryear 1970). <br />
+-All inputs have to be entered correctly as they are **CASE SENSITIVE** and considered invalid input (ex. -Filteryear 1970). <br />
+-Title inputs are **CASE SENSITIVE** so entering "-filtertitle i" would only filter songs with a lowercase "i". <br />
+-More than one command can be inputted at a time (ex. -filteryear 1970 -filtertitle Love -sortby artist). <br />
+-You can filter by a range of years or ranks. Make sure you use a **"/"** to seperate the two (ex. -filterank 1/10 -filteryear 1970/1972). <br />
 
 # User Commands
+```
 -print (Prints the playlist to console <br />
 -filteryear [YEAR1/YEAR2] or [YEAR1] (Filters songs between one or more years) <br />
 -filterrank [RANK#/RANK#] or [RANK#] (Filters songs with this rank(s)) <br />
@@ -28,3 +29,4 @@ You can filter by a range of years or ranks. Make sure you use a "/" to seperate
 -sortby [year] or [rank] or [artist] or [title] (sorts by \"year\", \"rank\", \"artist\", or \"song\" in acsending order) <br />
 -restart (Sets playlist back to default) <br />
 -quit (Quits the program) <br />
+```
