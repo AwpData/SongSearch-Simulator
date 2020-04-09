@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-//Input with multiple years/ranks enters with a slash (Ex. 1990/1995, 1/10).
+// Input with multiple years/ranks enters with a slash (Ex. 1990/1995, 1/10).
 
 public class GazillionSongs {
 	public static void main(String[] args) throws FileNotFoundException {
