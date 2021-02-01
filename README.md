@@ -6,9 +6,7 @@
 
 # Installation Instructions
 
--On Eclipse (I prefer this one) make 4 classes for GazillionSongs.java, Song.java, SongCollection.java, and Range.java. <br />
--Make sure that you create 2 text files (.txt), one for the input (GazillionSongs.txt), and one for the output file (Output.txt). <br />
--Hit the run button! <br />
+-Clone it and run from your preferred IDE <br />
 
 -You can modify the GazillionSongs.txt file to suit your needs but make sure it follows this format! <br />
 ```
