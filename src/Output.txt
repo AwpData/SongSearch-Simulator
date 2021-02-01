@@ -1,0 +1,5 @@
+Year	Rank		Artist									Title
+====	====	==============				=====================================
+2002	1		Eminem						Lose Yourself
+2002	2		Nelly						Dilemma
+2002	3		Ashanti						Foolish
